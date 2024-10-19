@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Health Details</title>
+    <link rel="stylesheet" href="css1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <h1>Personal Health Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="health-section">
+        <div class="metrics-container">
+            <!-- Heart Rate Card -->
+            <div class="metric-card heart-rate">
+                <h3>Heart Rate</h3>
+                <canvas id="heartRateChart" width="200" height="20"></canvas>
+                <p>Current Heart Rate: <span id="currentHeartRate">72</span> BPM</p>
+            </div>
+
+            <!-- Calories Card -->
+            <div class="metric-card calories">
+                <h3>Calories Burned</h3>
+                <canvas id="caloriesChart" width="200" height="20"></canvas>
+                <p>Calories Burned Today: <span id="caloriesBurned">500</span> kcal</p>
+            </div>
+
+            <!-- Blood Pressure Card -->
+            <div class="metric-card blood-pressure">
+                <h3>Blood Pressure</h3>
+                <p>Systolic: <span id="systolic">120</span> mmHg</p>
+                <p>Diastolic: <span id="diastolic">80</span> mmHg</p>
+                <p>Current BP: <span id="bpStatus">Normal</span></p>
+            </div>
+        </div>
+
+        <!-- Row-wise Report Section -->
+        <section class="report-section">
+            <h2>Day-wise Health Report (Row-wise)</h2>
+            <table id="healthReportTable">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Heart Rate (BPM)</th>
+                        <th>Calories Burned (kcal)</th>
+                        <th>Systolic BP (mmHg)</th>
+                        <th>Diastolic BP (mmHg)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Column-wise Report Section -->
+        <section class="report-section">
+            <h2>Day-wise Health Report (Column-wise)</h2>
+            <table id="columnReportTable">
+                <thead>
+                    <tr>
+                        <th>Health Metrics</th>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Heart Rate (BPM)</td>
+                        <td>72</td>
+                        <td>75</td>
+                        <td>78</td>
+                        <td>80</td>
+                        <td>85</td>
+                        <td>79</td>
+                        <td>77</td>
+                    </tr>
+                    <tr>
+                        <td>Calories Burned (kcal)</td>
+                        <td>300</td>
+                        <td>400</td>
+                        <td>500</td>
+                        <td>600</td>
+                        <td>550</td>
+                        <td>650</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>Systolic BP (mmHg)</td>
+                        <td>120</td>
+                        <td>122</td>
+                        <td>119</td>
+                        <td>121</td>
+                        <td>124</td>
+                        <td>123</td>
+                        <td>118</td>
+                    </tr>
+                    <tr>
+                        <td>Diastolic BP (mmHg)</td>
+                        <td>80</td>
+                        <td>82</td>
+                        <td>78</td>
+                        <td>79</td>
+                        <td>81</td>
+                        <td>80</td>
+                        <td>77</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <script src="health-details.js"></script>
+</body>
+</html>
